@@ -24,9 +24,11 @@ Example usage
     print(compose(times_3, plus_2)(1))
     print(compose(times_3, plus_2)(2))
     print(compose(times_3, plus_2)(3))
+    print(map(compose(times_3, plus_2), [1, 2, 3]))
 
 
     $ python composed_example.py
     9
     12
     15
+    [9, 12, 15]
