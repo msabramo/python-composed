@@ -15,6 +15,7 @@ class FunctionCompositionTests(unittest.TestCase):
         self.assertEqual(compose(times_3, plus_2)(1), 9)
         self.assertEqual(compose(times_3, plus_2)(2), 12)
         self.assertEqual(compose(times_3, plus_2)(3), 15)
+        self.assertEqual(map(compose(times_3, plus_2), [1, 2, 3]), [9, 12, 15])
 
     def test_compose_string_funcs(self):
         self.assertEqual(compose(str.strip, str.upper)(' hello '), 'HELLO')
